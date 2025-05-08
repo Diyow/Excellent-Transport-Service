@@ -80,30 +80,6 @@ export default function WhyChooseUs() {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 bg-teal-50 rounded-2xl p-8"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">500+</div>
-              <div className="text-teal-800">Happy Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">50+</div>
-              <div className="text-teal-800">Tour Packages</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-teal-600 mb-2">10+</div>
-              <div className="text-teal-800">Years Experience</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

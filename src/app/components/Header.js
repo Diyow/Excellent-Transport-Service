@@ -9,7 +9,7 @@ export default function Header() {
   const navItems = [
     { name: "Tour Packages", href: "#packages" },
     { name: "About Bali", href: "#about" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Transportation", href: "/transportation" },
     { name: "Contact", href: "#contact" },
   ];
 
