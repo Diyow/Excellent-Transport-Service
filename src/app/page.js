@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import TourPackages from "./components/TourPackages";
 import WhyChooseUs from "./components/WhyChooseUs";
 import PopularDestinations from "./components/PopularDestinations";
+import ExclusiveBaliExperiences from "./components/ExclusiveBaliExperiences";
 import TravelTips from "./components/TravelTips";
 import PhotoGallery from "./components/PhotoGallery";
 import FAQ from "./components/FAQ";
@@ -41,6 +42,7 @@ export default function Home() {
       <TourPackages destinations={destinations} />
       <WhyChooseUs />
       <PopularDestinations />
+      <ExclusiveBaliExperiences />
       <TravelTips />
       <PhotoGallery />
       <FAQ />
