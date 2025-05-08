@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 export default function DestinationDetail() {
   const params = useParams();
@@ -442,7 +440,6 @@ export default function DestinationDetail() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-100">
-      <Header />
       <div className="relative h-[50vh] md:h-[70vh]">
         <Image
           src={destination.image}
@@ -560,7 +557,6 @@ export default function DestinationDetail() {
           </Link>
         </motion.div>
       </div>
-      <Footer />
     </div>
   );
 }

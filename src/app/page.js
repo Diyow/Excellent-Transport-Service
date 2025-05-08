@@ -1,5 +1,4 @@
 'use client'
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import TourPackages from "./components/TourPackages";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -8,7 +7,6 @@ import ExclusiveBaliExperiences from "./components/ExclusiveBaliExperiences";
 import TravelTips from "./components/TravelTips";
 import PhotoGallery from "./components/PhotoGallery";
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
 
 export default function Home() {
   const destinations = [
@@ -37,7 +35,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-100 flex flex-col">
-      <Header />
       <Hero />
       <TourPackages destinations={destinations} />
       <WhyChooseUs />
@@ -46,7 +43,6 @@ export default function Home() {
       <TravelTips />
       <PhotoGallery />
       <FAQ />
-      <Footer />
     </div>
   );
 }

@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 export default function AllActivities() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -158,98 +156,78 @@ export default function AllActivities() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-100">
-      <Header />
-      <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl mt-12 font-bold text-teal-800 mb-4">Exclusive Bali Experiences</h1>
-          <p className="text-lg text-teal-600 max-w-3xl mx-auto">
-            Discover the most exciting and memorable activities Bali has to offer. From thrilling adventures to serene nature experiences, there's something for everyone.
-          </p>
-        </motion.div>
+    <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-16"
+      >
+        <h1 className="text-5xl mt-12 font-bold text-teal-800 mb-4">Exclusive Bali Experiences</h1>
+        <p className="text-lg text-teal-600 max-w-3xl mx-auto">
+          Discover the most exciting and memorable activities Bali has to offer. From thrilling adventures to serene nature experiences, there's something for everyone.
+        </p>
+      </motion.div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-2 rounded-full transition-colors duration-200 ${
-                activeFilter === category.id
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-white text-teal-600 hover:bg-teal-50'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Activities Grid */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredActivities.map((activity) => (
-            <motion.div
-              key={activity.name}
-              variants={itemVariants}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
-            >
-              <div className="relative h-64">
-                <Image
-                  src={activity.image}
-                  alt={activity.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                {activity.isHighlighted && (
-                  <div className="absolute top-4 right-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    Popular
-                  </div>
-                )}
-              </div>
-              <div className="p-6 flex-grow">
-                <h3 className="text-xl font-semibold text-teal-800 mb-2">{activity.name}</h3>
-                <p className="text-teal-600">{activity.description}</p>
-              </div>
-              <div className="p-6 pt-0">
-                <button className="text-teal-600 font-medium hover:text-teal-800 transition-colors duration-200 flex items-center">
-                  Book Now
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Back to Home Button */}
-        <div className="mt-16 text-center">
-          <Link 
-            href="/" 
-            className="inline-block bg-white text-teal-600 border border-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition-colors duration-200 mr-4"
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => setActiveFilter(category.id)}
+            className={`px-6 py-2 rounded-full transition-colors duration-200 ${
+              activeFilter === category.id
+                ? 'bg-teal-600 text-white'
+                : 'bg-white text-teal-600 hover:bg-teal-50'
+            }`}
           >
-            Back to Home
-          </Link>
-          <Link 
-            href="#contact" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors duration-200"
-          >
-            Contact Us
-          </Link>
-        </div>
+            {category.name}
+          </button>
+        ))}
       </div>
-      <Footer />
+
+      {/* Activities Grid */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        {filteredActivities.map((activity) => (
+          <motion.div
+            key={activity.name}
+            variants={itemVariants}
+            className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
+          >
+            <div className="relative h-64">
+              <Image
+                src={activity.image}
+                alt={activity.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              {activity.isHighlighted && (
+                <div className="absolute top-4 right-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  Popular
+                </div>
+              )}
+            </div>
+            <div className="p-6 flex-grow">
+              <h3 className="text-xl font-semibold text-teal-800 mb-2">{activity.name}</h3>
+              <p className="text-teal-600">{activity.description}</p>
+            </div>
+            <div className="p-6 pt-0">
+              <button className="text-teal-600 font-medium hover:text-teal-800 transition-colors duration-200 flex items-center">
+                Book Now
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 }
