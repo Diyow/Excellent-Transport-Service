@@ -25,7 +25,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <Image src="/globe.svg" alt="Travel Logo" width={36} height={36} />
+            <Image src="/EXTS.webp" alt="Travel Logo" width={36} height={36} />
             <span className="text-2xl font-bold text-teal-700">EXTS</span>
           </div>
 

@@ -88,14 +88,6 @@ export default function ExclusiveBaliExperiences() {
                 <h3 className="text-xl font-semibold text-teal-800 mb-2">{activity.name}</h3>
                 <p className="text-teal-600">{activity.description}</p>
               </div>
-              <div className="p-6 pt-0">
-                <button className="text-teal-600 font-medium hover:text-teal-800 transition-colors duration-200 flex items-center">
-                  Learn More
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
             </motion.div>
           ))}
         </div>
