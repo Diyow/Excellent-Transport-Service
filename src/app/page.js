@@ -15,21 +15,21 @@ export default function Home() {
       image: "/bali.jpg",
       description: "Explore Ubud's temples, rice terraces, and traditional arts.",
       duration: "3 Days",
-      price: "From $299"
+      price: "Start From $299"
     },
     {
       name: "Bali Beach Paradise",
       image: "/bali.jpg",
       description: "Discover pristine beaches and vibrant nightlife in Seminyak.",
       duration: "4 Days",
-      price: "From $399"
+      price: "Start From $399"
     },
     {
       name: "Bali Adventure Tour",
       image: "/bali.jpg",
       description: "Hike Mount Batur and experience water sports in Nusa Penida.",
       duration: "5 Days",
-      price: "From $499"
+      price: "Start From $499"
     },
   ];
 
