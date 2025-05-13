@@ -4,6 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function TransferServices() {
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "6287741459807";
+        const message = "Hi, I'm interested in booking a Transfer Service. Can you help me with more information?";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+      };
+      
   // Airport transfer pricing data
   const transferPricing = [
     { destination: "Nusa Dua", oneWay: 25, return: 45 },
@@ -34,14 +41,14 @@ export default function TransferServices() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-16">
           {/* Airport Transfer */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8 flex flex-col"
           >
             <div className="flex items-center mb-6">
               <div className="bg-teal-100 p-3 rounded-full mr-4">
@@ -79,7 +86,24 @@ export default function TransferServices() {
                 </svg>
                 Complimentary bottled water
               </li>
+              <li className="flex items-start">
+                <svg className="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Air-conditioned modern vehicles
+              </li>
+              <li className="flex items-start">
+                <svg className="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Professional English-speaking drivers
+              </li>
             </ul>
+            <div className="mt-auto p-4 bg-teal-50 rounded-lg">
+              <p className="text-teal-700 font-medium">
+                <span className="text-teal-800 font-bold">Important Note:</span> Our airport transfer service includes fixed pricing to popular destinations throughout Bali. See the pricing table below for details. For destinations not listed, please contact us for a custom quote.
+              </p>
+            </div>
           </motion.div>
 
           {/* Hotel Transfer */}
@@ -88,7 +112,7 @@ export default function TransferServices() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8 flex flex-col"
           >
             <div className="flex items-center mb-6">
               <div className="bg-teal-100 p-3 rounded-full mr-4">
@@ -126,7 +150,24 @@ export default function TransferServices() {
                 </svg>
                 Professional, English-speaking drivers
               </li>
+              <li className="flex items-start">
+                <svg className="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Air-conditioned modern vehicles
+              </li>
+              <li className="flex items-start">
+                <svg className="h-5 w-5 text-teal-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                No hidden fees or surcharges
+              </li>
             </ul>
+            <div className="mt-auto p-4 bg-teal-50 rounded-lg">
+              <p className="text-teal-700 font-medium">
+                <span className="text-teal-800 font-bold">Custom Pricing:</span> Hotel transfer prices are calculated based on the distance between locations. Contact us for a personalized quote based on your specific journey.
+              </p>
+            </div>
           </motion.div>
         </div>
 
@@ -139,8 +180,8 @@ export default function TransferServices() {
           className="bg-white rounded-2xl overflow-hidden shadow-lg"
         >
           <div className="p-6 bg-teal-700 text-white">
-            <h3 className="text-2xl font-bold">Transfer Pricing</h3>
-            <p className="text-teal-100">Transparent pricing for all destinations in Bali</p>
+            <h3 className="text-2xl font-bold">Airport Transfer Pricing</h3>
+            <p className="text-teal-100">Transparent pricing for airport transfers to all destinations in Bali</p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left">
@@ -169,17 +210,20 @@ export default function TransferServices() {
             <p className="text-sm mt-2">
               * For groups larger than 4 people or special requirements, please contact us for a custom quote.
             </p>
+            <p className="text-sm mt-2 font-medium">
+              * Hotel-to-hotel transfer pricing is not included in this table. Prices for hotel transfers are calculated based on the distance between locations. Please contact us for a personalized quote.
+            </p>
           </div>
         </motion.div>
 
         {/* CTA Button */}
         <div className="mt-12 text-center">
-          <Link 
-            href="/contact" 
+          <button 
+            onClick={handleWhatsAppClick}
             className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors duration-200"
           >
             Book Your Transfer
-          </Link>
+          </button>
         </div>
       </div>
     </section>
