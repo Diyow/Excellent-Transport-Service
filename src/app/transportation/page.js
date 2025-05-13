@@ -330,8 +330,6 @@ export default function Transportation() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
