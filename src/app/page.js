@@ -10,34 +10,10 @@ import PhotoGallery from "./components/PhotoGallery";
 import FAQ from "./components/FAQ";
 
 export default function Home() {
-  const destinations = [
-    {
-      name: "Bali Cultural Experience",
-      image: "/bali.jpg",
-      description: "Explore Ubud's temples, rice terraces, and traditional arts.",
-      duration: "3 Days",
-      price: "Start From $299"
-    },
-    {
-      name: "Bali Beach Paradise",
-      image: "/bali.jpg",
-      description: "Discover pristine beaches and vibrant nightlife in Seminyak.",
-      duration: "4 Days",
-      price: "Start From $399"
-    },
-    {
-      name: "Bali Adventure Tour",
-      image: "/bali.jpg",
-      description: "Hike Mount Batur and experience water sports in Nusa Penida.",
-      duration: "5 Days",
-      price: "Start From $499"
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-100 flex flex-col">
       <Hero />
-      <TourPackages destinations={destinations} />
+      <TourPackages />
       <WhyChooseUs />
       <PopularDestinations />
       <TransferServices />

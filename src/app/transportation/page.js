@@ -12,16 +12,16 @@ export default function Transportation() {
     {
       name: "Toyota Avanza",
       image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80",
-      category: "small",
+      category: "medium",
       specs: [
         "Max 4 persons with luggage for airport transfer",
-        "Max 5 persons for tour"
+        "Max 6 persons for tour"
       ]
     },
     {
       name: "Suzuki APV",
       image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80",
-      category: "small",
+      category: "medium",
       specs: [
         "Max 4 persons with luggage for airport transfer",
         "Max 6 persons for tour"
@@ -30,7 +30,7 @@ export default function Transportation() {
     {
       name: "Toyota Innova",
       image: "https://images.unsplash.com/photo-1543465077-db45d34b88a5?auto=format&fit=crop&q=80",
-      category: "small",
+      category: "medium",
       specs: [
         "Max 4 persons with luggage for airport transfer",
         "Max 6 persons for tour"
@@ -39,7 +39,7 @@ export default function Transportation() {
     {
       name: "Isuzu ELF",
       image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80",
-      category: "medium",
+      category: "large",
       specs: [
         "Max 9 persons with luggage for airport transfer",
         "Max 12 persons for tour"
@@ -58,9 +58,8 @@ export default function Transportation() {
 
   const categories = [
     { id: "all", name: "All Vehicles" },
-    { id: "small", name: "Small (4-6 persons)" },
-    { id: "medium", name: "Medium (7-12 persons)" },
-    { id: "large", name: "Large (13+ persons)" }
+    { id: "medium", name: "medium (4-7 seaters)" },
+    { id: "large", name: "Large (10-14 seaters)" }
   ];
 
   const filteredVehicles = selectedCategory === "all" 
