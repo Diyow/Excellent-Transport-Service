@@ -5,50 +5,26 @@ import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getPackageBySlug, getRelatedPackages } from '../../data/packagesData';
 
 export default function PackageDetail() {
   const params = useParams();
   const [packageData, setPackageData] = useState(null);
+  const [relatedPackages, setRelatedPackages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // All tour packages data (same as in all-packages/page.js)
-  const tourPackages = [
-    {
-      name: "Ubud Tour",
-      slug: "ubud-tour",
-      image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&q=80",
-      description: "Explore the cultural heart of Bali with visits to iconic temples, markets, and natural attractions.",
-      category: "full-day",
-      price: "$50",
-      duration: "Full Day",
-      attractions: [
-        "Monkey forest",
-        "Ubud Market",
-        "Ubud Palace",
-        "Tirta Empul Holy Water",
-        "Lunch at the Restaurant in Ubud",
-        "Tegalalang Rice Terrace"
-      ]
-    },
-    {
-      name: "Kintamani Tour",
-      slug: "kintamani-tour",
-      image: "https://images.unsplash.com/photo-1531201890865-fb64780d16e9?auto=format&fit=crop&q=80",
-      description: "Experience the breathtaking views of Mount Batur and Lake Batur in Kintamani (currently on hold).",
-      category: "full-day",
-      price: "$55",
-      duration: "Full Day",
-      attractions: [
-        "Enjoy coffee in the coffeeshop/cafe",
-        "Batur Lake",
-        "Tirta Empul",
-        "Lunch at Restaurant in kintamani area",
-        "Hot Spring"
-      ],
-      status: "on hold"
-    },
-    // ... include all other packages from all-packages/page.js
-  ];
+  useEffect(() => {
+    if (params.slug) {
+      const foundPackage = getPackageBySlug(params.slug);
+      setPackageData(foundPackage);
+      
+      if (foundPackage) {
+        setRelatedPackages(getRelatedPackages(params.slug));
+      }
+      
+      setLoading(false);
+    }
+  }, [params.slug]);
 
   useEffect(() => {
     if (params.slug) {

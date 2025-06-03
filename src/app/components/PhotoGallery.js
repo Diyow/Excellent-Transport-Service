@@ -39,7 +39,7 @@ export default function PhotoGallery() {
     }
   ];
 
-  const categories = ["All", "Nature", "Culture", "Beach"];
+  const categories = ["All", "Airport Transfer", "Tour", "Dll"];
 
   return (
     <section id="gallery" className="py-20 bg-white">

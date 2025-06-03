@@ -19,7 +19,7 @@ export default function TourPackages() {
       image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&q=80",
       description: "Explore the cultural heart of Bali with visits to iconic temples, markets, and natural attractions.",
       category: "full-day",
-      price: "$50",
+      price: "$41",
       duration: "Full Day",
       attractions: [
         "Monkey forest",
@@ -36,7 +36,7 @@ export default function TourPackages() {
       image: "https://images.unsplash.com/photo-1531201890865-fb64780d16e9?auto=format&fit=crop&q=80",
       description: "Experience the breathtaking views of Mount Batur and Lake Batur in Kintamani (currently on hold).",
       category: "full-day",
-      price: "$55",
+      price: "$41",
       duration: "Full Day",
       attractions: [
         "Enjoy coffee in the coffeeshop/cafe",
@@ -52,7 +52,7 @@ export default function TourPackages() {
       image: "https://images.unsplash.com/photo-1604665515758-f5a359c4fb96?auto=format&fit=crop&q=80",
       description: "Visit the iconic temples and scenic spots in the highlands of Bali.",
       category: "full-day",
-      price: "$60",
+      price: "$41",
       duration: "Full Day",
       attractions: [
         "Tanah Lot/Taman Ayun (optional, choose 1)",

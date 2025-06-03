@@ -130,28 +130,6 @@ export default function PopularDestinations() {
           </a>
         </motion.div>
 
-        {/* Map Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 bg-teal-50 rounded-2xl p-8"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-teal-800 mb-2">Explore Bali</h3>
-            <p className="text-teal-600">Click on the map to discover more about each region</p>
-          </div>
-          <div className="relative h-96 rounded-xl overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80"
-              alt="Bali Map"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

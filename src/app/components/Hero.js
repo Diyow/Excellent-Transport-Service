@@ -14,9 +14,9 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Modern Gradient Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-teal-500 to-blue-500 animate-gradient" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-400/20 via-transparent to-transparent animate-pulse" />
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-800/70 via-teal-700/60 to-teal-800/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-600 via-slate-500 to-blue-500 animate-gradient" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-400/20 via-transparent to-transparent animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-800/70 via-slate-700/60 to-slate-800/70" />
       </div>
 
       {/* Background Image with Overlay */}

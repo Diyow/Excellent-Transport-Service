@@ -18,7 +18,7 @@ export default function TransferServices() {
   const transferPricing = [
     { destination: "Nusa Dua", oneWay: 25, return: 45 },
     { destination: "Jimbaran", oneWay: 25, return: 45 },
-    { destination: "Kuta", oneWay: 20, return: 35 },
+    { destination: "Kuta", oneWay: 10.94, return: 35 },
     { destination: "Seminyak", oneWay: 25, return: 45 },
     { destination: "Sanur", oneWay: 25, return: 45 },
     { destination: "Canggu", oneWay: 30, return: 55 },
