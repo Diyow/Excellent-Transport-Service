@@ -6,12 +6,15 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPackageBySlug, getRelatedPackages } from '../../data/packagesData';
+import { transportationOptions, calculateAdjustedPrice } from '../../data/transportationData';
 
 export default function PackageDetail() {
   const params = useParams();
   const [packageData, setPackageData] = useState(null);
   const [relatedPackages, setRelatedPackages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [selectedTransportation, setSelectedTransportation] = useState('');
+  const [adjustedPrice, setAdjustedPrice] = useState('');
 
   useEffect(() => {
     if (params.slug) {
@@ -20,27 +23,28 @@ export default function PackageDetail() {
       
       if (foundPackage) {
         setRelatedPackages(getRelatedPackages(params.slug));
+        setAdjustedPrice(foundPackage.price); // Initialize with base price
       }
       
       setLoading(false);
     }
   }, [params.slug]);
 
+  // Update price when transportation selection changes
   useEffect(() => {
-    if (params.slug) {
-      // Find the package that matches the slug
-      const foundPackage = tourPackages.find(pkg => pkg.slug === params.slug);
-      setPackageData(foundPackage || null);
-      setLoading(false);
+    if (packageData) {
+      const newPrice = calculateAdjustedPrice(packageData.price, selectedTransportation);
+      setAdjustedPrice(newPrice);
     }
-  }, [params.slug]);
+  }, [selectedTransportation, packageData]);
 
   // Handle WhatsApp booking
   const handleBookNow = () => {
     if (!packageData) return;
     
     const phoneNumber = "6287741459807";
-    const message = `Hi, I'm interested in booking the ${packageData.name} package. Can you help me with more information?`;
+    const transportationInfo = selectedTransportation ? `with ${selectedTransportation} transportation` : "";
+    const message = `Hi, I'm interested in booking the ${packageData.name} package ${transportationInfo}. The total price is ${adjustedPrice}. Can you help me with more information?`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -247,11 +251,58 @@ export default function PackageDetail() {
             >
               <h2 className="text-2xl font-bold text-teal-800 mb-6">Book This Tour</h2>
               
+              {/* Transportation Selection */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-teal-700 mb-3">Select Transportation</h3>
+                <div className="space-y-3">
+                  {transportationOptions.map((option) => (
+                    <div 
+                      key={option.name}
+                      onClick={() => setSelectedTransportation(option.name)}
+                      className={`flex items-center p-3 border rounded-lg cursor-pointer transition-colors ${selectedTransportation === option.name ? 'border-teal-500 bg-teal-50' : 'border-gray-200 hover:bg-gray-50'}`}
+                    >
+                      <div className="relative h-12 w-12 rounded-md overflow-hidden mr-3">
+                        <Image
+                          src={option.image}
+                          alt={option.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-grow">
+                        <h4 className="font-medium text-teal-800">{option.name}</h4>
+                        <p className="text-xs text-teal-600">{option.specs[0]}</p>
+                      </div>
+                      <div className="text-right">
+                        {option.priceAdjustment > 0 ? (
+                          <span className="text-xs text-teal-600">+${option.priceAdjustment}</span>
+                        ) : (
+                          <span className="text-xs text-teal-600">Base price</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-2 text-right">
+                  <button 
+                    onClick={() => setSelectedTransportation('')}
+                    className="text-xs text-teal-600 hover:text-teal-800"
+                  >
+                    Reset selection
+                  </button>
+                </div>
+              </div>
+              
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-teal-700">Price</span>
-                  <span className="text-2xl font-bold text-teal-800">{packageData.price}</span>
+                  <span className="text-2xl font-bold text-teal-800">{adjustedPrice}</span>
                 </div>
+                {selectedTransportation && (
+                  <p className="text-xs text-teal-600 text-right">
+                    Includes {selectedTransportation} transportation
+                  </p>
+                )}
               </div>
               
               <button
@@ -302,9 +353,7 @@ export default function PackageDetail() {
           <h2 className="text-2xl sm:text-3xl font-bold text-teal-800 mb-6 sm:mb-8 text-center">You Might Also Like</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {tourPackages
-              .filter(pkg => pkg.slug !== packageData.slug && pkg.category === packageData.category)
-              .slice(0, 3)
+            {relatedPackages
               .map((pkg, idx) => (
                 <motion.div
                   key={pkg.name}
@@ -329,7 +378,7 @@ export default function PackageDetail() {
                   </Link>
                   <div className="p-4 flex-grow flex flex-col justify-between">
                     <p className="text-teal-600 text-sm mb-4 line-clamp-2">{pkg.description}</p>
-                    <div className="flex justify-between items-center mt-auto">
+                    <div className="flex justify-between items-center mb-auto">
                       <span className="text-lg font-bold text-teal-700">From {pkg.price}</span>
                       <Link 
                         href={`/all-packages/${pkg.slug}`} 
@@ -343,7 +392,7 @@ export default function PackageDetail() {
               ))}
           </div>
           
-          {tourPackages.filter(pkg => pkg.slug !== packageData.slug && pkg.category === packageData.category).length === 0 && (
+          {relatedPackages.length === 0 && (
             <div className="text-center py-8">
               <p className="text-teal-600">No related packages found.</p>
             </div>
@@ -351,5 +400,4 @@ export default function PackageDetail() {
         </div>
       </div>
     </div>
-  );
-}
+  );}
