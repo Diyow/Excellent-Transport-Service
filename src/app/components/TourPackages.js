@@ -69,14 +69,14 @@ export default function TourPackages() {
   const highlightedPackages = allPackages.slice(0, 3);
 
   return (
-    <section id="packages" className="py-16 sm:py-20 bg-gradient-to-b from-white to-teal-50">
+    <section id="packages" className="py-16 sm:py-20 bg-gradient-to-b from-white to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-bold text-teal-800 mb-3 sm:mb-4"
+            className="text-3xl sm:text-4xl font-bold text-slate-600 mb-3 sm:mb-4"
           >
             Bali Tour Packages
           </motion.h2>
@@ -85,7 +85,7 @@ export default function TourPackages() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-base sm:text-lg text-teal-600 max-w-2xl mx-auto px-4 sm:px-0"
+            className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto px-4 sm:px-0"
           >
             Choose from our carefully curated selection of Bali experiences, designed to give you the perfect blend of adventure, culture, and relaxation.
           </motion.p>
@@ -132,9 +132,9 @@ export default function TourPackages() {
                 </div>
               </Link>
               <div className="p-4 sm:p-6 flex-grow flex flex-col justify-between">
-                <p className="text-teal-600 mb-4 text-sm sm:text-base">{pkg.description}</p>
+                <p className="text-slate-600 mb-4 text-sm sm:text-base">{pkg.description}</p>
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 mt-auto">
-                  <span className="text-xl sm:text-2xl font-bold text-teal-700">From {pkg.price}</span>
+                  <span className="text-xl sm:text-2xl font-bold text-slate-700">From {pkg.price}</span>
                   <button
                     onClick={() => handleWhatsAppClick(pkg.name)}
                     className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex items-center gap-2 w-full sm:w-auto justify-center sm:justify-start"
@@ -154,7 +154,7 @@ export default function TourPackages() {
         <div className="text-center mt-10 sm:mt-12">
           <Link 
             href="/all-packages" 
-            className="inline-block bg-teal-600 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-medium hover:bg-teal-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+            className="inline-block bg-blue-500 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-base sm:text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-md hover:shadow-lg"
             aria-label="View all tour packages"
           >
             See All Packages

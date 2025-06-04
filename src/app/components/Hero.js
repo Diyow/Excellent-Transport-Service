@@ -47,7 +47,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-2xl font-semibold text-teal-400"
+                className="text-2xl font-semibold text-blue-400"
               >
                 Welcome to Paradise
               </motion.h2>
@@ -58,7 +58,7 @@ export default function Hero() {
                 className="text-4xl sm:text-6xl font-bold text-white leading-tight"
               >
                 Discover the Magic of{" "}
-                <span className="text-teal-400">Bali</span>
+                <span className="text-blue-400">Bali</span>
               </motion.h1>
             </div>
 
@@ -79,7 +79,7 @@ export default function Hero() {
             >
               <button
                 onClick={handleWhatsAppClick}
-                className="bg-teal-600 text-white px-8 py-3 rounded-full shadow-lg font-semibold text-lg hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center gap-2 group"
+                className="bg-green-500 text-white px-8 py-3 rounded-full shadow-lg font-semibold text-lg hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2 group"
               >
                 <svg
                   className="w-5 h-5 group-hover:scale-110 transition-transform duration-200"
@@ -119,7 +119,7 @@ export default function Hero() {
             >
               <div className="flex items-center gap-2 text-white/90">
                 <svg
-                  className="w-5 h-5 text-teal-400"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -133,7 +133,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2 text-white/90">
                 <svg
-                  className="w-5 h-5 text-teal-400"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -147,7 +147,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2 text-white/90">
                 <svg
-                  className="w-5 h-5 text-teal-400"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -161,7 +161,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2 text-white/90">
                 <svg
-                  className="w-5 h-5 text-teal-400"
+                  className="w-5 h-5 text-blue-400"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"

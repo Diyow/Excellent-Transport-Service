@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Image src="/EXTS.webp" alt="Travel Logo" width={36} height={36} />
-            <span className="text-2xl font-bold text-teal-700">EXTS</span>
+            <span className="text-2xl font-bold text-slate-700">EXTS</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -35,14 +35,14 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-teal-700 font-medium hover:text-teal-900 transition-colors duration-200"
+                className="text-slate-600 font-medium hover:text-slate-900 transition-colors duration-200"
               >
                 {item.name}
               </a>
             ))}
             <button
               onClick={handleWhatsAppClick}
-              className="bg-teal-600 text-white px-5 py-2 rounded-full shadow hover:bg-teal-700 transition-colors duration-200 flex items-center gap-2"
+              className="bg-green-500 text-white px-5 py-2 rounded-full shadow hover:bg-green-600 transition-colors duration-200 flex items-center gap-2"
             >
               <svg
                 className="w-5 h-5"
@@ -59,7 +59,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-teal-700 hover:text-teal-900 focus:outline-none"
+            className="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 focus:outline-none"
           >
             <svg
               className="h-6 w-6"
@@ -94,7 +94,7 @@ export default function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-teal-700 hover:text-teal-900 hover:bg-teal-50"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-slate-500 hover:text-slate-900 hover:bg-slate-50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -105,7 +105,7 @@ export default function Header() {
                   setIsMobileMenuOpen(false);
                   handleWhatsAppClick();
                 }}
-                className="w-full mt-4 bg-teal-600 text-white px-5 py-2 rounded-full shadow hover:bg-teal-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                className="w-full mt-4 bg-green-500 text-white px-5 py-2 rounded-full shadow hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2"
               >
                 <svg
                   className="w-5 h-5"
