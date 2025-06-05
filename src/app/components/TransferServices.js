@@ -32,7 +32,7 @@ export default function TransferServices() {
   return (
     <section
       id="transfer-services"
-      className="py-20 bg-gradient-to-b from-teal-50 to-white"
+      className="py-20 bg-gradient-to-b from-blue-100 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -41,10 +41,10 @@ export default function TransferServices() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-teal-800 mb-4">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Airport & Hotel Transfer Services
           </h2>
-          <p className="text-lg text-teal-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Enjoy hassle-free transportation between Bali's Ngurah Rai
             International Airport and your accommodation with our reliable
             transfer services.
@@ -61,10 +61,10 @@ export default function TransferServices() {
             className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8 flex flex-col"
           >
             <div className="flex items-center mb-6">
-              <div className="bg-teal-100 p-3 rounded-full mr-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-teal-600"
+                  className="h-8 w-8 text-blue-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -77,20 +77,20 @@ export default function TransferServices() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-teal-800">
+              <h3 className="text-2xl font-bold text-slate-800">
                 Airport Transfer
               </h3>
             </div>
-            <p className="text-teal-600 mb-6">
+            <p className="text-slate-600 mb-6">
               Our airport pickup service ensures a smooth start to your Bali
               vacation. We'll monitor your flight and wait for you even if it's
               delayed, helping with your luggage and providing a comfortable
               ride to your accommodation.
             </p>
-            <ul className="space-y-3 text-teal-700 mb-6">
+            <ul className="space-y-3 text-slate-700 mb-6">
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -122,7 +122,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -138,7 +138,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -154,7 +154,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -170,7 +170,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -185,9 +185,9 @@ export default function TransferServices() {
                 No hidden fees or surcharges
               </li>
             </ul>
-            <div className="mt-auto p-4 bg-teal-50 rounded-lg">
-              <p className="text-teal-700 font-medium">
-                <span className="text-teal-800 font-bold">Important Note:</span>{" "}
+            <div className="mt-auto p-4 bg-blue-50 rounded-lg">
+              <p className="text-slate-700 font-medium">
+                <span className="text-blue-800 font-bold">Important Note:</span>{" "}
                 Our airport transfer service includes fixed pricing to popular
                 destinations throughout Bali. See the pricing table below for
                 details. For destinations not listed, please contact us for a
@@ -205,10 +205,10 @@ export default function TransferServices() {
             className="bg-white rounded-2xl overflow-hidden shadow-lg p-6 md:p-8 flex flex-col"
           >
             <div className="flex items-center mb-6">
-              <div className="bg-teal-100 p-3 rounded-full mr-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-teal-600"
+                  className="h-8 w-8 text-blue-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -221,20 +221,20 @@ export default function TransferServices() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-teal-800">
+              <h3 className="text-2xl font-bold text-slate-800">
                 Hotel Transfer
               </h3>
             </div>
-            <p className="text-teal-600 mb-6">
+            <p className="text-slate-600 mb-6">
               Need to move between hotels during your stay? Our hotel transfer
               service provides convenient transportation between accommodations,
               allowing you to enjoy Bali without worrying about your luggage or
               finding transportation.
             </p>
-            <ul className="space-y-3 text-teal-700 mb-6">
+            <ul className="space-y-3 text-slate-700 mb-6">
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -250,7 +250,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -266,7 +266,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -282,7 +282,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -298,7 +298,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -314,7 +314,7 @@ export default function TransferServices() {
               </li>
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 text-teal-500 mr-2 mt-0.5"
+                  className="h-5 w-5 text-blue-500 mr-2 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -329,9 +329,9 @@ export default function TransferServices() {
                 No hidden fees or surcharges
               </li>
             </ul>
-            <div className="mt-auto p-4 bg-teal-50 rounded-lg">
-              <p className="text-teal-700 font-medium">
-                <span className="text-teal-800 font-bold">Custom Pricing:</span>{" "}
+            <div className="mt-auto p-4 bg-blue-50 rounded-lg">
+              <p className="text-slate-700 font-medium">
+                <span className="text-blue-800 font-bold">Custom Pricing:</span>{" "}
                 Hotel transfer prices are calculated based on the distance
                 between locations. Contact us for a personalized quote based on
                 your specific journey.
@@ -348,9 +348,9 @@ export default function TransferServices() {
           transition={{ delay: 0.6 }}
           className="bg-white rounded-2xl overflow-hidden shadow-lg"
         >
-          <div className="p-6 bg-teal-700 text-white">
+          <div className="p-6 bg-blue-600 text-white">
             <h3 className="text-2xl font-bold">Airport Transfer Pricing</h3>
-            <p className="text-teal-100">
+            <p className="text-blue-100">
               Transparent pricing for airport transfers to all destinations in
               Bali
             </p>
@@ -358,12 +358,12 @@ export default function TransferServices() {
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-teal-50">
-                  <th className="px-6 py-4 text-teal-800 font-bold">
+                <tr className="bg-blue-50">
+                  <th className="px-6 py-4 text-blue-600 font-bold">
                     DESTINATIONS
                   </th>
-                  <th className="px-6 py-4 text-teal-800 font-bold">ONE WAY</th>
-                  <th className="px-6 py-4 text-teal-800 font-bold">RETURN</th>
+                  <th className="px-6 py-4 text-blue-600 font-bold">ONE WAY</th>
+                  <th className="px-6 py-4 text-blue-600 font-bold">RETURN</th>
                 </tr>
               </thead>
               <tbody>
@@ -372,13 +372,13 @@ export default function TransferServices() {
                     key={item.destination}
                     className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
                   >
-                    <td className="px-6 py-4 text-teal-800 font-medium">
+                    <td className="px-6 py-4 text-slate-800 font-medium">
                       {item.destination}
                     </td>
-                    <td className="px-6 py-4 text-teal-700">
+                    <td className="px-6 py-4 text-slate-700">
                       USD {item.oneWay}
                     </td>
-                    <td className="px-6 py-4 text-teal-700">
+                    <td className="px-6 py-4 text-slate-700">
                       USD {item.return}
                     </td>
                   </tr>
@@ -386,7 +386,7 @@ export default function TransferServices() {
               </tbody>
             </table>
           </div>
-          <div className="p-6 bg-teal-50 text-teal-700">
+          <div className="p-6 bg-blue-50 text-slate-700">
             <p className="text-sm">
               * Prices are in USD and include all taxes and fees. Return
               transfers include both airport pickup and drop-off.
@@ -407,7 +407,7 @@ export default function TransferServices() {
         <div className="mt-12 text-center">
           <button
             onClick={handleWhatsAppClick}
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors duration-200"
+            className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
           >
             Book Your Transfer
           </button>

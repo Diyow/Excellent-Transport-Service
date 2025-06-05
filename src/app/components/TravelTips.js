@@ -55,23 +55,24 @@ export default function TravelTips() {
   ];
 
   return (
-    <section id="travel-tips" className="py-20 bg-gradient-to-b from-white to-teal-50">
+    <section id="travel-tips" className="py-20 bg-gradient-to-b from-blue-100 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-teal-800 mb-4"
+            className="text-4xl font-bold text-slate-800 mb-4"
           >
-            Travel Tips & Blog
+            Travel Tips
+            {/* Travel Tips & Blog */}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-teal-600 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             Essential information and insights to help you plan your perfect Bali trip.
           </motion.p>
@@ -88,15 +89,15 @@ export default function TravelTips() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="text-teal-600 mb-4">{tip.icon}</div>
-              <h3 className="text-xl font-semibold text-teal-800 mb-2">{tip.title}</h3>
-              <p className="text-teal-600">{tip.content}</p>
+              <div className="text-blue-400 mb-4">{tip.icon}</div>
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">{tip.title}</h3>
+              <p className="text-slate-500">{tip.content}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Blog Posts */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.title}
@@ -116,19 +117,19 @@ export default function TravelTips() {
                 />
               </div>
               <div className="p-6">
-                <div className="text-sm text-teal-600 mb-2">{post.date}</div>
-                <h3 className="text-xl font-semibold text-teal-800 mb-2">{post.title}</h3>
-                <p className="text-teal-600 mb-4">{post.excerpt}</p>
-                <button className="text-teal-600 font-medium hover:text-teal-800 transition-colors duration-200">
+                <div className="text-sm text-slate-600 mb-2">{post.date}</div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">{post.title}</h3>
+                <p className="text-slate-500 mb-4">{post.excerpt}</p>
+                <button className="text-blue-500 font-medium hover:text-blue-800 transition-colors duration-200">
                   Read More →
                 </button>
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Newsletter Signup */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -147,7 +148,7 @@ export default function TravelTips() {
               Subscribe
             </button>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

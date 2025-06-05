@@ -10,46 +10,46 @@ export default function PhotoGallery() {
     {
       src: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&q=80",
       alt: "Bali Rice Terraces",
-      category: "Nature"
+      category: "Airport Transfer"
     },
     {
       src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       alt: "Bali Temple",
-      category: "Culture"
+      category: "Airport Transfer"
     },
     {
       src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       alt: "Bali Beach",
-      category: "Beach"
+      category: "Dll"
     },
     {
       src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       alt: "Bali Waterfall",
-      category: "Nature"
+      category: "Dll"
     },
     {
       src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       alt: "Bali Market",
-      category: "Culture"
+      category: "Tour"
     },
     {
       src: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       alt: "Bali Sunset",
-      category: "Beach"
+      category: "Tour"
     }
   ];
 
   const categories = ["All", "Airport Transfer", "Tour", "Dll"];
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-teal-800 mb-4"
+            className="text-4xl font-bold text-slate-800 mb-4"
           >
             Photo Gallery
           </motion.h2>
@@ -58,7 +58,7 @@ export default function PhotoGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-teal-600 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             Explore the beauty of Bali through our curated collection of stunning photographs.
           </motion.p>
@@ -69,7 +69,7 @@ export default function PhotoGallery() {
           {categories.map((category) => (
             <button
               key={category}
-              className="px-4 py-2 rounded-full text-teal-600 hover:bg-teal-50 transition-colors duration-200"
+              className="px-4 py-2 rounded-full text-slate-600 hover:bg-blue-50 transition-colors duration-200"
             >
               {category}
             </button>
@@ -117,7 +117,7 @@ export default function PhotoGallery() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <button
-                className="absolute top-4 right-4 text-white hover:text-teal-400 transition-colors duration-200"
+                className="absolute top-4 right-4 text-white hover:text-blue-400 transition-colors duration-200"
                 onClick={() => setSelectedImage(null)}
               >
                 <svg

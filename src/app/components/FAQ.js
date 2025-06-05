@@ -33,14 +33,14 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-teal-50 to-white">
+    <section id="faq" className="py-20 bg-gradient-to-b from-blue-100 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-teal-800 mb-4"
+            className="text-4xl font-bold text-slate-800 mb-4"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -49,7 +49,7 @@ export default function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-teal-600 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             Find answers to common questions about traveling to Bali.
           </motion.p>
@@ -70,9 +70,9 @@ export default function FAQ() {
                 className="w-full text-left p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-teal-800">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-slate-800">{faq.question}</h3>
                   <svg
-                    className={`w-6 h-6 text-teal-600 transform transition-transform duration-300 ${
+                    className={`w-6 h-6 text-blue-500 transform transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -93,7 +93,7 @@ export default function FAQ() {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-4 text-teal-600"
+                    className="mt-4 text-slate-500"
                   >
                     {faq.answer}
                   </motion.div>
@@ -111,11 +111,11 @@ export default function FAQ() {
           transition={{ delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold text-teal-800 mb-4">Still have questions?</h3>
-          <p className="text-teal-600 mb-6">We're here to help! Contact us for more information.</p>
+          <h3 className="text-2xl font-bold text-slate-800 mb-4">Still have questions?</h3>
+          <p className="text-slate-600 mb-6">We're here to help! Contact us for more information.</p>
           <a
             href="#contact"
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors duration-200"
+            className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
           >
             Contact Us
           </a>

@@ -54,14 +54,14 @@ export default function PopularDestinations() {
   ];
 
   return (
-    <section id="destinations" className="py-20 bg-white">
+    <section id="destinations" className="py-20 bg-white bg-gradient-to-b from-white to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-teal-800 mb-4"
+            className="text-4xl font-bold text-slate-800 mb-4"
           >
             Popular Destinations
           </motion.h2>
@@ -70,7 +70,7 @@ export default function PopularDestinations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-teal-600 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             Discover the most beautiful and iconic places in Bali that you shouldn't miss.
           </motion.p>
@@ -100,10 +100,10 @@ export default function PopularDestinations() {
                 </h3>
               </div>
               <div className="p-6">
-                <p className="text-teal-600 mb-4">{destination.description}</p>
+                <p className="text-slate-600 mb-4">{destination.description}</p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-teal-800">Highlights:</h4>
-                  <ul className="list-disc list-inside text-teal-600">
+                  <h4 className="font-semibold text-slate-800">Highlights:</h4>
+                  <ul className="list-disc list-inside text-slate-600">
                     {destination.highlights.map((highlight) => (
                       <li key={highlight}>{highlight}</li>
                     ))}
@@ -124,7 +124,7 @@ export default function PopularDestinations() {
         >
           <a 
             href="/all-destinations" 
-            className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors duration-200"
+            className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
           >
             See More Destinations
           </a>

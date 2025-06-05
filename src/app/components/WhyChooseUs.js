@@ -42,14 +42,14 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-gradient-to-b from-teal-50 to-white">
+    <section id="why-choose-us" className="py-20 bg-gradient-to-b from-blue-100 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-teal-800 mb-4"
+            className="text-4xl font-bold text-slate-800 mb-4"
           >
             Why Choose Us
           </motion.h2>
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-teal-600 max-w-2xl mx-auto"
+            className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             We're committed to providing you with the best Bali experience possible. Here's what makes us different.
           </motion.p>
@@ -74,9 +74,9 @@ export default function WhyChooseUs() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="text-teal-600 mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-teal-800 mb-2">{feature.title}</h3>
-              <p className="text-teal-600">{feature.description}</p>
+              <div className="text-blue-400 mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">{feature.title}</h3>
+              <p className="text-slate-500">{feature.description}</p>
             </motion.div>
           ))}
         </div>
