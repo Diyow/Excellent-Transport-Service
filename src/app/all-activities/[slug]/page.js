@@ -41,7 +41,7 @@ export default function ActivityDetail() {
       <div className="min-h-screen py-20 bg-gradient-to-br from-blue-50 to-teal-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-teal-800 mb-4">Activity Not Found</h1>
-          <p className="text-teal-600 mb-8">The activity you're looking for doesn't exist.</p>
+          <p className="text-teal-600 mb-8">The activity you&aposre looking for doesn&apost exist.</p>
           <Link 
             href="/all-activities"
             className="inline-block bg-teal-600 text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors duration-200"

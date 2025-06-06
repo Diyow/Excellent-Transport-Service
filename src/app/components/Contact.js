@@ -50,7 +50,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-lg text-teal-600 max-w-2xl mx-auto"
           >
-            Have questions about our tours? We're here to help! Get in touch with us.
+            Have questions about our tours? We&aposre here to help! Get in touch with us.
           </motion.p>
         </div>
 

@@ -32,7 +32,7 @@ export default function PopularDestinations() {
     {
       name: "Lahangan",
       image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
-      description: "Home to some of Bali's most iconic temples and breathtaking views.",
+      description: "Home to some of Bali&aposs most iconic temples and breathtaking views.",
       highlights: [
         "Lempuyang Temple",
         "Lahangan Sweet",
@@ -72,7 +72,7 @@ export default function PopularDestinations() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
-            Discover the most beautiful and iconic places in Bali that you shouldn't miss.
+            Discover the most beautiful and iconic places in Bali that you shouldn&apost miss.
           </motion.p>
         </div>
 

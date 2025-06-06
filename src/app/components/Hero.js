@@ -68,7 +68,7 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="text-lg text-gray-200 max-w-xl"
             >
-              Experience the perfect blend of culture, adventure, and relaxation in the Island of the Gods. From pristine beaches to ancient temples, we'll show you the best of Bali.
+              Experience the perfect blend of culture, adventure, and relaxation in the Island of the Gods. From pristine beaches to ancient temples, we&aposll show you the best of Bali.
             </motion.p>
 
             <motion.div

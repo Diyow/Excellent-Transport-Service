@@ -41,7 +41,7 @@ export default function AllPackages() {
           transition={{ delay: 0.2 }}
           className="text-base sm:text-lg text-center text-slate-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0"
         >
-          Explore our full range of tour packages designed to showcase the best of Bali's culture, nature, and attractions.
+          Explore our full range of tour packages designed to showcase the best of Bali&aposs culture, nature, and attractions.
         </motion.p>
 
         {/* Filter buttons - sticky on mobile */}

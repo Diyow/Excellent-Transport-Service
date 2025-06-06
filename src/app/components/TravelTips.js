@@ -24,7 +24,7 @@ export default function TravelTips() {
     },
     {
       title: "Packing Guide",
-      content: "Pack light, breathable clothing, swimwear, sunscreen, and insect repellent. Don't forget your camera and power adapter.",
+      content: "Pack light, breathable clothing, swimwear, sunscreen, and insect repellent. Don&apost forget your camera and power adapter.",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -35,13 +35,13 @@ export default function TravelTips() {
 
   const blogPosts = [
     {
-      title: "Exploring Ubud's Hidden Gems",
+      title: "Exploring Ubud&aposs Hidden Gems",
       image: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&q=80",
       excerpt: "Discover the lesser-known attractions in Ubud that most tourists miss.",
       date: "March 15, 2024"
     },
     {
-      title: "Bali's Best Beaches",
+      title: "Bali&aposs Best Beaches",
       image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&q=80",
       excerpt: "A guide to the most beautiful beaches in Bali, from popular spots to hidden coves.",
       date: "March 10, 2024"
