@@ -26,12 +26,12 @@ export default function AllPackages() {
   }, [activeFilter]);
 
   return (
-    <div className="min-h-screen py-12 sm:py-20 bg-gradient-to-br from-blue-50 to-teal-100">
+    <div className="min-h-screen py-12 sm:py-20 bg-gradient-to-br from-slate-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl sm:text-4xl font-bold text-center text-teal-800 mb-3 sm:mb-4"
+          className="text-3xl sm:text-4xl font-bold text-center text-slate-800 mb-3 sm:mb-4"
         >
           Our Bali Tour Packages
         </motion.h1>
@@ -39,33 +39,33 @@ export default function AllPackages() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-base sm:text-lg text-center text-teal-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0"
+          className="text-base sm:text-lg text-center text-slate-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0"
         >
           Explore our full range of tour packages designed to showcase the best of Bali's culture, nature, and attractions.
         </motion.p>
 
         {/* Filter buttons - sticky on mobile */}
-        <div 
-          className={`${isScrolled ? 'sticky top-0 z-10 py-3 bg-teal-50/90 backdrop-blur-sm shadow-md' : ''} 
+        <div
+          className={`${isScrolled ? 'sticky top-0 z-10 py-3 bg-slate-50/90 backdrop-blur-sm shadow-md' : ''} 
           flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 transition-all duration-300 -mx-4 px-4 sm:mx-0 sm:px-0`}
         >
           <button
             onClick={() => setActiveFilter('all')}
-            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'all' ? 'bg-teal-600 text-white' : 'bg-white text-teal-700 hover:bg-teal-50'}`}
+            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-white text-slate-700 hover:bg-blue-50'}`}
             aria-label="Show all packages"
           >
             All Packages
           </button>
           <button
             onClick={() => setActiveFilter('full-day')}
-            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'full-day' ? 'bg-teal-600 text-white' : 'bg-white text-teal-700 hover:bg-teal-50'}`}
+            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'full-day' ? 'bg-blue-500 text-white' : 'bg-white text-slate-700 hover:bg-blue-50'}`}
             aria-label="Show full day tours only"
           >
             Full Day Tours
           </button>
           <button
             onClick={() => setActiveFilter('nusa-penida')}
-            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'nusa-penida' ? 'bg-teal-600 text-white' : 'bg-white text-teal-700 hover:bg-teal-50'}`}
+            className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${activeFilter === 'nusa-penida' ? 'bg-blue-500 text-white' : 'bg-white text-slate-700 hover:bg-blue-50'}`}
             aria-label="Show Nusa Penida tours only"
           >
             Nusa Penida Tours
@@ -74,7 +74,7 @@ export default function AllPackages() {
 
         {/* Results count */}
         <div className="mb-6 text-center sm:text-left">
-          <p className="text-sm text-teal-700">
+          <p className="text-sm text-blue-700">
             Showing <span className="font-semibold">{filteredPackages.length}</span> packages
           </p>
         </div>
@@ -109,21 +109,21 @@ export default function AllPackages() {
                 </div>
               </Link>
               <div className="p-4 sm:p-6 flex-grow flex flex-col">
-                <p className="text-teal-600 mb-4 text-sm sm:text-base">{pkg.description}</p>
+                <p className="text-slate-600 mb-4 text-sm sm:text-base">{pkg.description}</p>
                 
                 {/* Attractions preview */}
                 {pkg.attractions && pkg.attractions.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-teal-800 mb-2">Highlights:</h4>
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Highlights:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
                       {pkg.attractions.slice(0, 3).map((attraction, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-teal-500 mr-2">•</span>
+                          <span className="text-blue-400 mr-2">•</span>
                           <span>{attraction}</span>
                         </li>
                       ))}
                       {pkg.attractions.length > 3 && (
-                        <li className="text-teal-600 text-xs italic">+{pkg.attractions.length - 3} more</li>
+                        <li className="text-blue-400 text-xs italic">+{pkg.attractions.length - 3} more</li>
                       )}
                     </ul>
                   </div>
@@ -131,12 +131,12 @@ export default function AllPackages() {
                 
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mt-auto pt-3 border-t border-gray-100">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl sm:text-2xl font-bold text-teal-700">From {pkg.price}</span>
+                    <span className="text-xl sm:text-2xl font-bold text-blue-500">From {pkg.price}</span>
                     <span className="text-xs text-gray-500 self-end mb-1">per package</span>
                   </div>
                   <Link 
                     href={`/all-packages/${pkg.slug}`} 
-                    className="bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-teal-700 transition-colors duration-200 w-full sm:w-auto text-center"
+                    className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-200 w-full sm:w-auto text-center"
                     aria-label={`View details for ${pkg.name}`}
                   >
                     View Details
@@ -150,10 +150,10 @@ export default function AllPackages() {
         {/* No results message */}
         {filteredPackages.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-lg text-teal-700">No packages found for the selected filter.</p>
+            <p className="text-lg text-slate-700">No packages found for the selected filter.</p>
             <button 
               onClick={() => setActiveFilter('all')} 
-              className="mt-4 text-teal-600 underline hover:text-teal-800"
+              className="mt-4 text-slate-600 underline hover:text-slate-800"
             >
               View all packages
             </button>

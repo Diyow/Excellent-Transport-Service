@@ -51,21 +51,21 @@ export default function PackageDetail() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-teal-100">
-        <div className="animate-pulse text-teal-700 text-xl">Loading...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-100">
+        <div className="animate-pulse text-slate-700 text-xl">Loading...</div>
       </div>
     );
   }
 
   if (!packageData) {
     return (
-      <div className="min-h-screen py-20 bg-gradient-to-br from-blue-50 to-teal-100">
+      <div className="min-h-screen py-20 bg-gradient-to-br from-slate-50 to-blue-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl font-bold text-teal-800 mb-4">Package Not Found</h1>
-          <p className="text-teal-600 mb-8">The tour package you're looking for doesn't exist.</p>
+          <h1 className="text-3xl font-bold text-slate-800 mb-4">Package Not Found</h1>
+          <p className="text-slate-600 mb-8">The tour package you're looking for doesn't exist.</p>
           <Link 
             href="/all-packages" 
-            className="inline-block bg-teal-600 text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors duration-200"
+            className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors duration-200"
           >
             Browse All Packages
           </Link>
@@ -75,33 +75,33 @@ export default function PackageDetail() {
   }
 
   return (
-    <div className="min-h-screen py-12 sm:py-20 bg-gradient-to-br from-blue-50 to-teal-100">
+    <div className="min-h-screen py-12 sm:py-20 bg-gradient-to-br from-slate-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="mb-6 sm:mb-8">
           <nav className="flex" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
               <li className="inline-flex items-center">
-                <Link href="/" className="text-sm text-teal-700 hover:text-teal-900">
+                <Link href="/" className="text-sm text-blue-500 hover:text-blue-900">
                   Home
                 </Link>
               </li>
               <li>
                 <div className="flex items-center">
-                  <svg className="w-3 h-3 text-teal-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <svg className="w-3 h-3 text-blue-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
-                  <Link href="/all-packages" className="text-sm text-teal-700 hover:text-teal-900 ml-1 md:ml-2">
+                  <Link href="/all-packages" className="text-sm text-blue-500 hover:text-blue-900 ml-1 md:ml-2">
                     All Packages
                   </Link>
                 </div>
               </li>
               <li aria-current="page">
                 <div className="flex items-center">
-                  <svg className="w-3 h-3 text-teal-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <svg className="w-3 h-3 text-blue-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                   </svg>
-                  <span className="text-sm text-teal-500 ml-1 md:ml-2">{packageData.name}</span>
+                  <span className="text-sm text-blue-400 ml-1 md:ml-2">{packageData.name}</span>
                 </div>
               </li>
             </ol>
@@ -170,16 +170,16 @@ export default function PackageDetail() {
               transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-8"
             >
-              <h2 className="text-2xl font-bold text-teal-800 mb-4">About This Tour</h2>
-              <p className="text-teal-700 mb-6">{packageData.description}</p>
+              <h2 className="text-2xl font-bold text-slate-800 mb-4">About This Tour</h2>
+              <p className="text-slate-700 mb-6">{packageData.description}</p>
               
               {packageData.attractions && packageData.attractions.length > 0 && (
                 <div>
-                  <h3 className="text-xl font-semibold text-teal-800 mb-3">Tour Highlights</h3>
-                  <ul className="space-y-2 text-teal-700">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-3">Tour Highlights</h3>
+                  <ul className="space-y-2 text-blue-500">
                     {packageData.attractions.map((attraction, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-teal-500 mr-2 text-xl">•</span>
+                        <span className="text-blue-400 mr-2 text-xl">•</span>
                         <span>{attraction}</span>
                       </li>
                     ))}
@@ -194,11 +194,11 @@ export default function PackageDetail() {
               transition={{ delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6 sm:p-8"
             >
-              <h2 className="text-2xl font-bold text-teal-800 mb-4">What to Expect</h2>
+              <h2 className="text-2xl font-bold text-slate-800 mb-4">What to Expect</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-teal-700 mb-2">Inclusions</h3>
-                  <ul className="space-y-1 text-teal-600">
+                  <h3 className="text-lg font-semibold text-slate-700 mb-2">Inclusions</h3>
+                  <ul className="space-y-1 text-blue-500">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
@@ -227,8 +227,8 @@ export default function PackageDetail() {
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-teal-700 mb-2">Exclusions</h3>
-                  <ul className="space-y-1 text-teal-600">
+                  <h3 className="text-lg font-semibold text-slate-700 mb-2">Exclusions</h3>
+                  <ul className="space-y-1 text-blue-500">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-red-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -249,17 +249,17 @@ export default function PackageDetail() {
               transition={{ delay: 0.3 }}
               className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 sticky top-8"
             >
-              <h2 className="text-2xl font-bold text-teal-800 mb-6">Book This Tour</h2>
+              <h2 className="text-2xl font-bold text-slate-800 mb-6">Book This Tour</h2>
               
               {/* Transportation Selection */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">Select Transportation</h3>
+                <h3 className="text-lg font-semibold text-slate-700 mb-3">Select Transportation</h3>
                 <div className="space-y-3">
                   {transportationOptions.map((option) => (
                     <div 
                       key={option.name}
                       onClick={() => setSelectedTransportation(option.name)}
-                      className={`flex items-center p-3 border rounded-lg cursor-pointer transition-colors ${selectedTransportation === option.name ? 'border-teal-500 bg-teal-50' : 'border-gray-200 hover:bg-gray-50'}`}
+                      className={`flex items-center p-3 border rounded-lg cursor-pointer transition-colors ${selectedTransportation === option.name ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:bg-gray-50'}`}
                     >
                       <div className="relative h-12 w-12 rounded-md overflow-hidden mr-3">
                         <Image
@@ -270,14 +270,14 @@ export default function PackageDetail() {
                         />
                       </div>
                       <div className="flex-grow">
-                        <h4 className="font-medium text-teal-800">{option.name}</h4>
-                        <p className="text-xs text-teal-600">{option.specs[0]}</p>
+                        <h4 className="font-medium text-slate-800">{option.name}</h4>
+                        <p className="text-xs text-blue-400">{option.specs[0]}</p>
                       </div>
                       <div className="text-right">
                         {option.priceAdjustment > 0 ? (
-                          <span className="text-xs text-teal-600">+${option.priceAdjustment}</span>
+                          <span className="text-xs text-slate-600">+${option.priceAdjustment}</span>
                         ) : (
-                          <span className="text-xs text-teal-600">Base price</span>
+                          <span className="text-xs text-slate-600">Base price</span>
                         )}
                       </div>
                     </div>
@@ -286,7 +286,7 @@ export default function PackageDetail() {
                 <div className="mt-2 text-right">
                   <button 
                     onClick={() => setSelectedTransportation('')}
-                    className="text-xs text-teal-600 hover:text-teal-800"
+                    className="text-xs text-blue-600 hover:text-blue-800"
                   >
                     Reset selection
                   </button>
@@ -295,11 +295,11 @@ export default function PackageDetail() {
               
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-teal-700">Price</span>
-                  <span className="text-2xl font-bold text-teal-800">{adjustedPrice}</span>
+                  <span className="text-slate-700">Price</span>
+                  <span className="text-2xl font-bold text-blue-500">{adjustedPrice}</span>
                 </div>
                 {selectedTransportation && (
-                  <p className="text-xs text-teal-600 text-right">
+                  <p className="text-xs text-blue-400 text-right">
                     Includes {selectedTransportation} transportation
                   </p>
                 )}
@@ -323,8 +323,8 @@ export default function PackageDetail() {
               )}
               
               <div className="mt-6 pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-teal-800 mb-3">Need Help?</h3>
-                <p className="text-teal-600 text-sm mb-4">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">Need Help?</h3>
+                <p className="text-slate-600 text-sm mb-4">
                   Have questions about this tour? Contact us for more information.
                 </p>
                 <Link 
@@ -336,7 +336,7 @@ export default function PackageDetail() {
                     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                     window.open(whatsappUrl, '_blank');
                   }}
-                  className="text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
+                  className="text-blue-500 hover:text-blue-800 text-sm flex items-center gap-1"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -350,7 +350,7 @@ export default function PackageDetail() {
         
         {/* Related Packages */}
         <div className="mt-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-teal-800 mb-6 sm:mb-8 text-center">You Might Also Like</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-6 sm:mb-8 text-center">You Might Also Like</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {relatedPackages
@@ -377,12 +377,12 @@ export default function PackageDetail() {
                     </div>
                   </Link>
                   <div className="p-4 flex-grow flex flex-col justify-between">
-                    <p className="text-teal-600 text-sm mb-4 line-clamp-2">{pkg.description}</p>
+                    <p className="text-slate-600 text-sm mb-4 line-clamp-2">{pkg.description}</p>
                     <div className="flex justify-between items-center mb-auto">
-                      <span className="text-lg font-bold text-teal-700">From {pkg.price}</span>
+                      <span className="text-lg font-bold text-blue-500">From {pkg.price}</span>
                       <Link 
                         href={`/all-packages/${pkg.slug}`} 
-                        className="text-teal-600 hover:text-teal-800 text-sm font-medium"
+                        className="text-blue-500 hover:text-blue-800 text-sm font-medium"
                       >
                         View Details
                       </Link>
