@@ -121,7 +121,7 @@ export default function Transportation() {
               transition={{ delay: 0.2 }}
               className="text-lg text-teal-600 max-w-3xl mx-auto"
             >
-              We offer a variety of well-maintained vehicles to suit your needs, whether you're traveling solo, with family, or in a large group. All our vehicles come with professional drivers, air conditioning, and complimentary bottled water.
+              We offer a variety of well-maintained vehicles to suit your needs, whether you&aposre traveling solo, with family, or in a large group. All our vehicles come with professional drivers, air conditioning, and complimentary bottled water.
             </motion.p>
           </div>
 
@@ -247,7 +247,7 @@ export default function Transportation() {
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold">3</div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-teal-800 mb-1">Confirm Your Booking</h4>
-                    <p className="text-teal-600">We'll send you a confirmation with all the details of your transportation</p>
+                    <p className="text-teal-600">We&aposll send you a confirmation with all the details of your transportation</p>
                   </div>
                 </div>
                 <div className="flex items-start">

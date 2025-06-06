@@ -1,6 +1,7 @@
 'use client'
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PopularDestinations() {
   // Only including the highlighted destinations for the main page
@@ -122,12 +123,12 @@ export default function PopularDestinations() {
           transition={{ delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <a 
+          <Link 
             href="/all-destinations" 
             className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"
           >
             See More Destinations
-          </a>
+          </Link>
         </motion.div>
 
       </div>
