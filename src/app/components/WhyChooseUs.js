@@ -1,4 +1,3 @@
-'use client'
 import { motion } from "framer-motion";
 
 export default function WhyChooseUs() {
@@ -60,7 +59,7 @@ export default function WhyChooseUs() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
-            We&aposre committed to providing you with the best Bali experience possible. Here&aposs what makes us different.
+            We&apos;re committed to providing you with the best Bali experience possible. Here&apos;s what makes us different.
           </motion.p>
         </div>
 

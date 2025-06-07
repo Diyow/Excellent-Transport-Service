@@ -1,11 +1,9 @@
-'use client'
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { highlightedActivities } from "../data/activitiesData";
 
 export default function ExclusiveBaliExperiences() {
-  // Now using the imported highlightedActivities
   
   return (
     <section id="exclusive-experiences" className="py-20 bg-gradient-to-b from-white to-blue-100">

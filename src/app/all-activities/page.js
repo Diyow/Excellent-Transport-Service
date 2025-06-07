@@ -46,7 +46,7 @@ export default function AllActivities() {
       >
         <h1 className="text-5xl mt-12 font-bold text-teal-800 mb-4">Exclusive Bali Experiences</h1>
         <p className="text-lg text-teal-600 max-w-3xl mx-auto">
-          Discover the most exciting and memorable activities Bali has to offer. From thrilling adventures to serene nature experiences, there&aposs something for everyone.
+          Discover the most exciting and memorable activities Bali has to offer. From thrilling adventures to serene nature experiences, there&apos;s something for everyone.
         </p>
       </motion.div>
 

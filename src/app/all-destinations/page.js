@@ -41,7 +41,7 @@ export default function AllDestinations() {
         >
           <h1 className="text-5xl mt-12 font-bold text-teal-800 mb-4">Explore Bali Destinations</h1>
           <p className="text-lg text-teal-600 max-w-3xl mx-auto">
-            Discover the beauty and diversity of Bali&aposs most enchanting locations, from pristine beaches to cultural landmarks and natural wonders.
+            Discover the beauty and diversity of Bali&apos;s most enchanting locations, from pristine beaches to cultural landmarks and natural wonders.
           </p>
         </motion.div>
 

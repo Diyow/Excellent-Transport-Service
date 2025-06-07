@@ -31,7 +31,7 @@ export default function DestinationDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-teal-100 p-4">
         <h1 className="text-4xl font-bold text-teal-800 mb-4">Destination Not Found</h1>
-        <p className="text-lg text-teal-600 mb-8">Sorry, we couldn&apost find the destination you&aposre looking for.</p>
+        <p className="text-lg text-teal-600 mb-8">Sorry, we couldn&apos;t find the destination you&apos;re looking for.</p>
         <Link href="/all-destinations">
           <button className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors duration-200">
             Back to All Destinations

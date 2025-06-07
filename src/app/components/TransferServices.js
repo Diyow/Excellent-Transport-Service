@@ -1,7 +1,4 @@
-"use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function TransferServices() {
   const handleWhatsAppClick = () => {
@@ -45,7 +42,7 @@ export default function TransferServices() {
             Airport & Hotel Transfer Services
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Enjoy hassle-free transportation between Bali&aposs Ngurah Rai
+            Enjoy hassle-free transportation between Bali&apos;s Ngurah Rai
             International Airport and your accommodation with our reliable
             transfer services.
           </p>
@@ -83,7 +80,7 @@ export default function TransferServices() {
             </div>
             <p className="text-slate-600 mb-6">
               Our airport pickup service ensures a smooth start to your Bali
-              vacation. We&aposll monitor your flight and wait for you even if it&aposs
+              vacation. We&apos;ll monitor your flight and wait for you even if it&apos;s
               delayed, helping with your luggage and providing a comfortable
               ride to your accommodation.
             </p>

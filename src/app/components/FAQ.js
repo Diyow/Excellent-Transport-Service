@@ -12,19 +12,19 @@ export default function FAQ() {
     },
     {
       question: "Do I need a visa to visit Bali?",
-      answer: "Most countries can enter Indonesia visa-free for up to 30 days. However, it&aposs best to check with your local Indonesian embassy or consulate for the most up-to-date visa requirements for your country."
+      answer: "Most countries can enter Indonesia visa-free for up to 30 days. However, it's best to check with your local Indonesian embassy or consulate for the most up-to-date visa requirements for your country."
     },
     {
       question: "What should I pack for my Bali trip?",
-      answer: "Pack light, breathable clothing, swimwear, sunscreen, insect repellent, and comfortable walking shoes. Don&apost forget your camera, power adapter, and any necessary medications. If you plan to visit temples, bring modest clothing that covers your shoulders and knees."
+      answer: "Pack light, breathable clothing, swimwear, sunscreen, insect repellent, and comfortable walking shoes. Don't forget your camera, power adapter, and any necessary medications. If you plan to visit temples, bring modest clothing that covers your shoulders and knees."
     },
     {
       question: "Is Bali safe for tourists?",
-      answer: "Bali is generally safe for tourists. However, like any popular tourist destination, it&aposs important to take basic precautions such as keeping your belongings secure, being aware of your surroundings, and following local customs and regulations."
+      answer: "Bali is generally safe for tourists. However, like any popular tourist destination, it's important to take basic precautions such as keeping your belongings secure, being aware of your surroundings, and following local customs and regulations."
     },
     {
       question: "What currency is used in Bali?",
-      answer: "The official currency in Bali is the Indonesian Rupiah (IDR). While some places accept credit cards, it&aposs recommended to carry cash for smaller purchases and local markets. ATMs are widely available in tourist areas."
+      answer: "The official currency in Bali is the Indonesian Rupiah (IDR). While some places accept credit cards, it's recommended to carry cash for smaller purchases and local markets. ATMs are widely available in tourist areas."
     },
     {
       question: "How do I get around in Bali?",
@@ -112,7 +112,7 @@ export default function FAQ() {
           className="mt-16 text-center"
         >
           <h3 className="text-2xl font-bold text-slate-800 mb-4">Still have questions?</h3>
-          <p className="text-slate-600 mb-6">We&aposre here to help! Contact us for more information.</p>
+          <p className="text-slate-600 mb-6">We&apos;re here to help! Contact us for more information.</p>
           <a
             href="#contact"
             className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200"

@@ -62,7 +62,7 @@ export default function PackageDetail() {
       <div className="min-h-screen py-20 bg-gradient-to-br from-slate-50 to-blue-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-slate-800 mb-4">Package Not Found</h1>
-          <p className="text-slate-600 mb-8">The tour package you&aposre looking for doesn&apost exist.</p>
+          <p className="text-slate-600 mb-8">The tour package you&apos;re looking for doesn&apos;t exist.</p>
           <Link 
             href="/all-packages" 
             className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors duration-200"
