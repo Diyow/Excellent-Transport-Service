@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPackageBySlug, getRelatedPackages } from '../../data/packagesData';
-import { transportationOptions, calculateAdjustedPrice } from '../../data/transportationData';
+import { getTransportationByCategory, calculateAdjustedPrice } from '../../data/transportationData';
 
 export default function PackageDetail() {
   const params = useParams();
@@ -15,6 +15,7 @@ export default function PackageDetail() {
   const [loading, setLoading] = useState(true);
   const [selectedTransportation, setSelectedTransportation] = useState('');
   const [adjustedPrice, setAdjustedPrice] = useState('');
+  const [transportationOptions, setTransportationOptions] = useState([]);
 
   useEffect(() => {
     if (params.slug) {
@@ -24,6 +25,9 @@ export default function PackageDetail() {
       if (foundPackage) {
         setRelatedPackages(getRelatedPackages(params.slug));
         setAdjustedPrice(foundPackage.price); // Initialize with base price
+        
+        // Get transportation options
+        setTransportationOptions(getTransportationByCategory('all'));
       }
       
       setLoading(false);

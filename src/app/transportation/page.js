@@ -1,60 +1,18 @@
 'use client'
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
+import { getTransportationByCategory } from "@/app/data/transportationData";
 
 export default function Transportation() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [filteredVehicles, setFilteredVehicles] = useState([]);
   
-  const vehicles = [
-    {
-      name: "Toyota Avanza",
-      image: "/transportation/toyota-avanza.avif",
-      category: "medium",
-      specs: [
-        "Max 4 persons with luggage for airport transfer",
-        "Max 6 persons for tour"
-      ]
-    },
-    {
-      name: "Suzuki APV",
-      image: "/transportation/suzuki-apv.avif",
-      category: "medium",
-      specs: [
-        "Max 4 persons with luggage for airport transfer",
-        "Max 6 persons for tour"
-      ]
-    },
-    {
-      name: "Toyota Innova",
-      image: "/transportation/toyota-innova.avif",
-      category: "medium",
-      specs: [
-        "Max 4 persons with luggage for airport transfer",
-        "Max 6 persons for tour"
-      ]
-    },
-    {
-      name: "Isuzu ELF",
-      image: "/transportation/isuzu-elf.jpg",
-      category: "large",
-      specs: [
-        "Max 9 persons with luggage for airport transfer",
-        "Max 12 persons for tour"
-      ]
-    },
-    {
-      name: "Toyota Hiace",
-      image: "/transportation/toyota-hiace.jpg",
-      category: "large",
-      specs: [
-        "Max 10 persons with luggage for airport transfer",
-        "Max 15 persons for tour"
-      ]
-    }
-  ];
+  // Use the imported function to get transportation data
+  useEffect(() => {
+    const vehicles = getTransportationByCategory(selectedCategory);
+    setFilteredVehicles(vehicles);
+  }, [selectedCategory]);
 
   const categories = [
     { id: "all", name: "All Vehicles" },
@@ -62,13 +20,8 @@ export default function Transportation() {
     { id: "large", name: "Large (10-14 seaters)" }
   ];
 
-  const filteredVehicles = selectedCategory === "all" 
-    ? vehicles 
-    : vehicles.filter(vehicle => vehicle.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-slate-200 flex flex-col">
-      <Header />
       
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center">
